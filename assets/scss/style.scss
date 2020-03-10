@@ -1,0 +1,27 @@
+@import 'font-face';
+@import 'vars';
+
+@import 'reset';
+@import 'login';
+
+body, input {
+  font-family: 'Airbnb Cereal App', Arial, Helvetica, sans-serif;
+  color: $primaryColor;
+}
+
+.baris {
+  display: flex;
+  width: 100%;
+}
+
+.btn {
+  min-width: 110px;
+  font-size: $psize;
+  font-family: 'Airbnb Cereal App';
+  background-color: transparent;
+  border: 2px solid #D0CCCC;
+}
+
+btn-auth-secondary {
+  
+}
