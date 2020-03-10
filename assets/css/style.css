@@ -52,6 +52,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  text-decoration: none;
   margin: 0;
   padding: 0;
   border: 0;
@@ -104,7 +105,13 @@ table {
   color: #fff;
   background-image: url("../img/hero-login.png");
   background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .hero-login {
+    display: none;
+  }
 }
 .hero-login::after {
   content: "";
@@ -132,21 +139,33 @@ table {
 }
 
 #container-login {
+  position: relative;
   width: 30vw;
+  height: 98vh;
   box-sizing: border-box;
   margin: 0 auto;
 }
-#container-login a {
+@media only screen and (max-width: 768px) {
+  #container-login {
+    width: 80vw;
+  }
+}
+#container-login .logo {
   position: absolute;
   top: 12px;
   right: 15px;
 }
 #container-login h1 {
-  margin-top: 207px;
+  margin-top: 200px;
   font-size: 64px;
   font-weight: bold;
   color: #424242;
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 768px) {
+  #container-login h1 {
+    margin-top: 100px;
+  }
 }
 #container-login p {
   font-size: 17px;
@@ -154,19 +173,21 @@ table {
   margin-bottom: 42px;
 }
 
-.grup-input {
+form label {
+  font-family: "Airbnb Cereal App";
+  font-size: 17px;
+}
+form .grup-input {
   border: 2px solid #E0E0E0;
   border-radius: 5px;
   box-shadow: 0 36px 36px -40px #000;
 }
-
-label {
+form .grup-input label {
   position: absolute;
   color: #D0CCCC;
   margin: 17px;
 }
-
-input {
+form .grup-input input {
   box-sizing: border-box;
   padding: 17px;
   width: 100%;
@@ -174,8 +195,35 @@ input {
   font-size: 20px;
   padding-top: 40px;
 }
-input:focus {
+form .grup-input input:focus {
   outline: none;
+}
+form .baris {
+  margin-top: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form .baris a {
+  text-decoration: none;
+  color: #424242;
+}
+form .grup-btn {
+  margin-top: 24px;
+}
+form .grup-btn button {
+  margin-right: 12px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+footer p {
+  color: #D0CCCC;
+  max-width: 302px;
+}
+footer p a {
+  color: #424242;
 }
 
 body, input {
@@ -188,12 +236,25 @@ body, input {
   width: 100%;
 }
 
-.btn {
-  min-width: 110px;
-  font-size: 17px;
+.btn, a.btn {
+  display: inline-block;
   font-family: "Airbnb Cereal App";
+  font-size: 17px;
+  text-align: center;
+  line-height: 0;
+  color: #424242;
   background-color: transparent;
+  padding: 18px 0;
+  min-width: 110px;
   border: 2px solid #D0CCCC;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.btn-auth-primary {
+  background-color: black;
+  color: #fff;
+  border: 2px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
