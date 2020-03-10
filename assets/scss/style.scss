@@ -2,7 +2,7 @@
 @import 'vars';
 
 @import 'reset';
-@import 'login';
+@import 'auth';
 
 body, input {
   font-family: 'Airbnb Cereal App', Arial, Helvetica, sans-serif;
@@ -24,6 +24,11 @@ body, input {
   background-color: transparent;
   padding: 18px 0;
   min-width: 110px;
+  @include layar(tablet) {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 24px 0;
+  }
   border: 2px solid #D0CCCC;
   border-radius: 5px;
   cursor: pointer;

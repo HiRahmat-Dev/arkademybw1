@@ -6,7 +6,7 @@
   <title>Registration Page</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body id="login">
+<body id="register">
 <!--
 * Kriteria Penilaian
 * 1.  Gunakan HTML5
@@ -19,11 +19,11 @@
 -->
 
 <div class="container">
-  <div class="hero-login">
+  <div class="hero-auth">
     <h1>Book is a window<br>to the world</h1>
     <p>Photo by Mark Pan4ratte on Unsplash</p>
   </div>
-  <div id="container-login">
+  <div id="container-register">
     <a class="logo" href="">
       <img src="./assets/img/logo.png" alt="">
     </a>
@@ -31,19 +31,20 @@
     <p>Welcome Back, Please Login<br>to Your Account</p>
     <form>
       <div class="grup-input">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" value="Rahmat">
+      </div>
+      <div class="grup-input">
+        <label for="user">Username</label>
+        <input type="text" id="user" name="user" value="Rahmat Hidayatullah">
+      </div>
+      <div class="grup-input">
         <label for="email">Email Address</label>
-        <input type="email" name="email" value="rebecca@gmail.com">
+        <input type="email" id="email" name="email" value="rahmat@arkademy.org">
       </div>
       <div class="grup-input">
         <label for="password">Password</label>
-        <input type="password" name="password" value="mmmmmsabyan">
-      </div>
-      <div class="baris">
-        <div class="grup-checkbox">
-          <input type="checkbox" name="remember">
-          <label for="remember">Password</label>
-        </div>
-        <a href=""><p>Forgot Password</p></a>
+        <input type="password" id="password" name="password" value="mmmmmsabyan">
       </div>
       
       <div class="grup-btn">
@@ -51,12 +52,10 @@
         <a href="login.html" class="btn btn-auth-secondary">Login</a>
       </div>
     </form>
-    <footer>
-      <p>By signing up, you agree to Book's <a href="#">Terms and Conditions</a> & <a href="#">Privacy Policy</a></p>
-    </footer>
   </div>
+  <footer>
+    <p>By signing up, you agree to Book's <a href="#">Terms and Conditions</a> & <a href="#">Privacy Policy</a></p>
+  </footer>
 </div>
-
-
 </body>
 </html>
