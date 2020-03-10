@@ -24,7 +24,7 @@
     <p>Photo by Mark Pan4ratte on Unsplash</p>
   </div>
   <div id="container-login">
-    <a href="">
+    <a class="logo" href="">
       <img src="./assets/img/logo.png" alt="">
     </a>
     <h1>Login</h1>
@@ -32,20 +32,23 @@
     <form>
       <div class="grup-input">
         <label for="email">Email Address</label>
-        <input type="email" id="email" value="rebecca@gmail.com">
+        <input type="email" name="email" value="rebecca@gmail.com">
       </div>
       <div class="grup-input">
         <label for="password">Password</label>
-        <input type="password" id="password" value="mmmmmsabyan">
+        <input type="password" name="password" value="mmmmmsabyan">
       </div>
       <div class="baris">
         <div class="grup-checkbox">
-          <input type="checkbox" id="remember">
-          <label for="remember">Remember me</label>
+          <input type="checkbox" name="remember">
+          <label for="remember">Password</label>
         </div>
+        <a href=""><p>Forgot Password</p></a>
       </div>
+      
       <div class="grup-btn">
-        <button class="btn">Login</button>
+        <button class="btn btn-auth-primary">Login</button>
+        <a href="register.html" class="btn btn-auth-secondary">Register</a>
       </div>
     </form>
   </div>
