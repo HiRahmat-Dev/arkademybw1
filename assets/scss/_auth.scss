@@ -138,10 +138,18 @@ form {
   }
 
   .baris {
-    // .grup-checkbox {
-      
-
-    // }
+    .grup-checkbox {
+      display: flex;
+      align-content: center;
+      label {
+        margin-top: 3px;
+        margin-left: 3px;
+      }
+      input {
+        width: 18px;
+        height: 18px;
+      }      
+    }
     margin-top: 32px;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -174,6 +182,7 @@ footer {
   p {
     color: #D0CCCC;
     max-width: 302px;
+    line-height: 22px;
     a {
       color: $primaryColor;
     }

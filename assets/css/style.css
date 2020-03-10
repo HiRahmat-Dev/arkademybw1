@@ -234,6 +234,18 @@ form .baris {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+form .baris .grup-checkbox {
+  display: flex;
+  align-content: center;
+}
+form .baris .grup-checkbox label {
+  margin-top: 3px;
+  margin-left: 3px;
+}
+form .baris .grup-checkbox input {
+  width: 18px;
+  height: 18px;
+}
 form .baris a {
   text-decoration: none;
   color: #424242;
@@ -262,6 +274,7 @@ footer {
 footer p {
   color: #D0CCCC;
   max-width: 302px;
+  line-height: 22px;
 }
 footer p a {
   color: #424242;
