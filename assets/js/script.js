@@ -17,4 +17,15 @@ for (let i = 0; i < burger.length; i++) {
 }
 
 
+let dataModal = document.querySelector('.bg-modal');
+let edit = document.querySelector('.grup-edit .edit');
+let close = document.querySelector('button.close');
+
+edit.addEventListener('click', function() {
+  dataModal.style.display = 'flex';
+});
+close.addEventListener('click', function() {
+  dataModal.style.display = 'none';
+});
+
 
