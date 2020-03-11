@@ -95,13 +95,70 @@ table {
   v2.0 | 20110126
   License: none (public domain)
 */
-#login .container, #register .container {
+body, input {
+  font-family: "Airbnb Cereal App", Arial, Helvetica, sans-serif;
+  color: #424242;
+}
+
+.container-fluid {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.baris {
+  display: flex;
+  width: auto;
+}
+
+.btn, a.btn {
+  display: inline-block;
+  font-family: "Airbnb Cereal App";
+  font-size: 17px;
+  text-align: center;
+  line-height: 0;
+  color: #424242;
+  background-color: transparent;
+  padding: 18px 0;
+  min-width: 110px;
+  border: 2px solid #D0CCCC;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .btn, a.btn {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 24px 0;
+  }
+}
+
+.btn.btn-auth-primary {
+  background-color: black;
+  color: #fff;
+  border: 2px solid black;
+}
+
+/* 
+! AUTH
+*/
+#login .container-fluid, #register .container-fluid {
   display: flex;
   position: relative;
   height: 110vh;
 }
 @media only screen and (max-width: 768px) {
-  #login .container, #register .container {
+  #login .container-fluid, #register .container-fluid {
     flex-wrap: wrap;
   }
 }
@@ -256,6 +313,11 @@ form .grup-btn {
 form .grup-btn button {
   margin-right: 12px;
 }
+@media only screen and (max-width: 768px) {
+  form .grup-btn button {
+    margin-right: 0;
+  }
+}
 
 footer {
   position: absolute;
@@ -280,42 +342,212 @@ footer p a {
   color: #424242;
 }
 
-body, input {
-  font-family: "Airbnb Cereal App", Arial, Helvetica, sans-serif;
-  color: #424242;
-}
-
-.baris {
+/* 
+! END OF AUTH
+*/
+/* 
+! DASHBOARD
+*/
+/* 
+! END OF DASHBOARD
+*/
+/* 
+! DETAILS
+*/
+header.container-fluid a.btn-back {
   display: flex;
-  width: 100%;
-}
-
-.btn, a.btn {
-  display: inline-block;
-  font-family: "Airbnb Cereal App";
-  font-size: 17px;
-  text-align: center;
-  line-height: 0;
-  color: #424242;
-  background-color: transparent;
-  padding: 18px 0;
-  min-width: 110px;
-  border: 2px solid #D0CCCC;
-  border-radius: 5px;
-  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 29px;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
+  transition: ease 0.2s;
 }
 @media only screen and (max-width: 768px) {
-  .btn, a.btn {
-    width: 100%;
-    margin-bottom: 12px;
-    padding: 24px 0;
+  header.container-fluid a.btn-back {
+    left: 16px;
+  }
+}
+header.container-fluid a.btn-back:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.13);
+}
+header.container-fluid a.btn-back:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.13);
+}
+header.container-fluid a.btn-back svg {
+  margin-right: 2px;
+  align-self: center;
+}
+header.container-fluid img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.container {
+  padding-bottom: 80px;
+}
+.container .baris {
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .container .baris {
+    flex-direction: column;
   }
 }
 
-.btn.btn-auth-primary {
-  background-color: black;
-  color: #fff;
-  border: 2px solid black;
+.kolom.artikel {
+  width: 70%;
 }
+@media only screen and (max-width: 768px) {
+  .kolom.artikel {
+    width: 100%;
+  }
+}
+.kolom.artikel .baris:first-child {
+  padding-bottom: 4vh;
+}
+@media only screen and (max-width: 768px) {
+  .kolom.artikel .baris {
+    flex-direction: row;
+    padding-bottom: 8vh;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .kolom.artikel .baris {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .kolom.artikel .baris .kolom:first-child {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .kolom.artikel .baris .kolom:first-child {
+    width: 100%;
+  }
+}
+.kolom.artikel .baris .kolom:nth-child(2) {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+}
+.kolom.artikel .baris .kolom:nth-child(2) p.status {
+  font-size: 30px;
+  font-weight: bold;
+  color: #99D815;
+}
+@media only screen and (max-width: 768px) {
+  .kolom.artikel .baris .kolom:nth-child(2) {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .kolom.artikel .baris .kolom:nth-child(2) {
+    justify-content: flex-start;
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+.kolom.artikel .lencana {
+  margin-top: 12px;
+  max-width: 90px;
+  padding: 6px 0;
+  font-size: 17px;
+  text-align: center;
+  background-color: #FBCC38;
+  color: white;
+  border-radius: 15px;
+}
+.kolom.artikel .judul-buku {
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 50px;
+  color: #000;
+  text-transform: uppercase;
+}
+.kolom.artikel .waktu {
+  margin-top: 12px;
+  color: black;
+  font-size: 20px;
+}
+.kolom.artikel .baris p.deskripsi {
+  margin-top: 42px;
+  color: black;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 768px) {
+  .kolom.artikel .baris p.deskripsi {
+    margin-top: 8px;
+  }
+}
+
+.kolom.aksi {
+  margin-left: 42px;
+  width: 30%;
+}
+@media only screen and (max-width: 768px) {
+  .kolom.aksi {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.kolom.aksi .baris {
+  justify-content: flex-end;
+}
+.kolom.aksi img.sampul-buku {
+  margin-top: -160px;
+}
+@media only screen and (max-width: 768px) {
+  .kolom.aksi img.sampul-buku {
+    display: none;
+  }
+}
+
+.btn-pinjam {
+  margin-right: 14px;
+  margin-top: 180px;
+  color: white;
+  background-color: #FBCC38;
+  font-size: 30px;
+  width: 220px;
+  text-align: center;
+  padding: 18px 0;
+  border-radius: 10px;
+  transition: ease 0.2s;
+}
+@media only screen and (max-width: 768px) {
+  .btn-pinjam {
+    box-sizing: border-box;
+    margin-right: 0;
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    bottom: 2%;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
+  }
+}
+.btn-pinjam:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
+}
+.btn-pinjam:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.13);
+}
+
+/* 
+! END OF DETAILS
+*/
 
 /*# sourceMappingURL=style.css.map */

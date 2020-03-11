@@ -1,5 +1,13 @@
+/* 
+! AUTH
+*/
+
+
+
+
+
 #login, #register {
-  .container {
+  .container-fluid {
     display: flex;
     position: relative;
     height: 110vh;
@@ -163,6 +171,9 @@ form {
     margin-top: 24px;
     button {
       margin-right: 12px;
+      @include layar(tablet) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -188,3 +199,12 @@ footer {
     }
   }
 }
+
+
+
+
+
+
+/* 
+! END OF AUTH
+*/
