@@ -197,6 +197,7 @@ header.container-fluid {
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
+    background-color: $pentingLighter;
   }
   &:active {
     transform: translateY(2px);
@@ -213,7 +214,7 @@ header.container-fluid {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.596);
+  background-color: rgba(141, 141, 141, 0.541);
   .modal-content {
     position: relative;
     width: 80%;
@@ -275,6 +276,17 @@ header.container-fluid {
         }
 
         .btn-modal {
+          transition: .2s;
+          &:active {
+            outline: none;
+          }
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            background-color: $pentingLighter;
+          }
+          cursor: pointer;
           margin-left: auto;
           color: white;
           background-color: $penting;

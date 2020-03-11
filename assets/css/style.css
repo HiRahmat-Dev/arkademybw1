@@ -423,6 +423,12 @@ form.search .grup-search button {
   border: none;
   cursor: pointer;
 }
+form.search .grup-search button:active {
+  outline: none;
+}
+form.search .grup-search button:focus {
+  outline: none;
+}
 form.search .grup-search img {
   padding: 6px;
 }
@@ -438,6 +444,10 @@ form.search .grup-search input::placeholder {
   color: #CACACA;
 }
 
+.logo {
+  flex-wrap: nowrap;
+  margin-left: 36px;
+}
 .logo img {
   width: 50px;
   margin-right: 12px;
@@ -643,7 +653,7 @@ section.list-book h2 {
 }
 
 .container-fluid, #menu-profil, .burger a, .kolom, .baris, .card {
-  transition: ease 0.8s;
+  transition: ease 0.5s;
 }
 
 .fade-out {
@@ -856,6 +866,7 @@ header.container-fluid .grup-edit .edit {
 .btn-pinjam:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
+  background-color: #fdd347;
 }
 .btn-pinjam:active {
   transform: translateY(2px);
@@ -870,7 +881,7 @@ header.container-fluid .grup-edit .edit {
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.596);
+  background-color: rgba(141, 141, 141, 0.541);
 }
 .bg-modal .modal-content {
   position: relative;
@@ -928,6 +939,8 @@ header.container-fluid .grup-edit .edit {
   outline: none;
 }
 .bg-modal .modal-content .modal-container form .btn-modal {
+  transition: 0.2s;
+  cursor: pointer;
   margin-left: auto;
   color: white;
   background-color: #FBCC38;
@@ -937,6 +950,15 @@ header.container-fluid .grup-edit .edit {
   padding: 18px 0;
   border: none;
   border-radius: 10px;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:active {
+  outline: none;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:focus {
+  outline: none;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:hover {
+  background-color: #fdd347;
 }
 
 /* 

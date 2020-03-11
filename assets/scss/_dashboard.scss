@@ -71,6 +71,12 @@ form.search {
       background-color: transparent;
       border: none;
       cursor: pointer;
+      &:active {
+        outline: none;
+      }
+      &:focus {
+        outline: none;
+      }
     }
     img {
       padding: 6px;
@@ -90,6 +96,8 @@ form.search {
 }
 
 .logo {
+  flex-wrap: nowrap;
+  margin-left: 36px;
   img {
     width: 50px;
     margin-right: 12px;
@@ -278,7 +286,7 @@ section.list-book {
 
 
 .container-fluid, #menu-profil, .burger a, .kolom, .baris, .card {
-  transition: ease .8s;
+  transition: ease .5s;
 }
 
 .fade-out {
