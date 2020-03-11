@@ -353,29 +353,29 @@ footer p a {
 /* 
 ! DASHBOARD
 */
-nav {
+.nav {
   display: flex;
   box-shadow: 0 4px 7px #0000003a;
   padding: 12px 3%;
   justify-content: space-between;
 }
-nav form.search .grup-search {
+.nav form.search .grup-search {
   width: 406px;
 }
-nav .logo {
+.nav .logo {
   flex-wrap: nowrap;
   margin-left: 36px;
 }
-nav .logo img {
+.nav .logo img {
   width: 50px;
   margin-right: 12px;
 }
-nav .logo h1 {
+.nav .logo h1 {
   font-size: 30px;
   font-weight: bold;
 }
 
-#menu-profil nav {
+#menu-profil .nav {
   display: flex;
   box-shadow: none;
   padding: 24px 0 0 3%;

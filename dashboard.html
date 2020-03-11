@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+ 
   <div class="container-fluid">
-    <nav>
+    <div class="nav">
       <div class="navbar">
         <div class="burger">
           <a><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -36,7 +37,7 @@
       <form class="search">
         <div class="grup-search">
           <button><img src="./assets/img/magnifying-glass.png" alt=""></button>
-          <input type="text" placeholder="Search book">
+          <input type="search" placeholder="Search book">
         </div>
       </form>
 
@@ -44,15 +45,19 @@
         <img src="./assets/img/logo.png" alt="Logo Library">
         <h1>Library</h1>
       </div>
-    </nav>
+    </div>
 
-    <section class="carousel-wrap">
-      <div class="carousel">
-        
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="./assets/img/carousel1.png" alt="">
       </div>
-
-    </section>
-
+      <div class="carousel-item">
+        <img src="./assets/img/carousel2.png" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/laskar.png" alt="">
+      </div>
+    </div>
     <section class="list-book">
       <h2>List Book</h2>
       <div class="book baris">
@@ -135,7 +140,8 @@
 
 
   <aside id="menu-profil" class="geser-kiri">
-    <nav><div class="burger">
+    <div class="nav">
+      <div class="burger">
         <a><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect width="20" height="20" fill="url(#pattern0)"/>
           <defs>
@@ -147,7 +153,8 @@
           </svg>
         </a>
         
-      </div></nav>
+      </div>
+    </div>
     <div class="container center">
       <div class="foto-profil">
         <img src="./assets/img/Niki Zefanya.png" alt="">
@@ -170,6 +177,7 @@
       </ul>
     </div>
   </aside>
+
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

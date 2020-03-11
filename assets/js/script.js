@@ -27,5 +27,3 @@ edit.addEventListener('click', function() {
 close.addEventListener('click', function() {
   dataModal.style.display = 'none';
 });
-
-
