@@ -362,6 +362,18 @@ nav {
 nav form.search .grup-search {
   width: 406px;
 }
+nav .logo {
+  flex-wrap: nowrap;
+  margin-left: 36px;
+}
+nav .logo img {
+  width: 50px;
+  margin-right: 12px;
+}
+nav .logo h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
 
 #menu-profil nav {
   display: flex;
@@ -442,19 +454,6 @@ form.search .grup-search input {
 }
 form.search .grup-search input::placeholder {
   color: #CACACA;
-}
-
-.logo {
-  flex-wrap: nowrap;
-  margin-left: 36px;
-}
-.logo img {
-  width: 50px;
-  margin-right: 12px;
-}
-.logo h1 {
-  font-size: 30px;
-  font-weight: bold;
 }
 
 section.list-book {

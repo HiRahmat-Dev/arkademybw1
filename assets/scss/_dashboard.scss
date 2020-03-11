@@ -13,6 +13,20 @@ nav {
       width: 406px;
     }
   }
+
+  .logo {
+    flex-wrap: nowrap;
+    margin-left: 36px;
+    img {
+      width: 50px;
+      margin-right: 12px;
+    }
+  
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
 }
 #menu-profil nav {
   display: flex;
@@ -95,19 +109,7 @@ form.search {
   }
 }
 
-.logo {
-  flex-wrap: nowrap;
-  margin-left: 36px;
-  img {
-    width: 50px;
-    margin-right: 12px;
-  }
 
-  h1 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-}
 
 section.list-book {
   padding: 0 3%;
