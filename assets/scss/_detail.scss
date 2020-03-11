@@ -43,7 +43,6 @@ header.container-fluid {
 }
 
 .container {
-  padding-bottom: 80px;
   .baris {
     justify-content: space-between;
     @include layar(tablet) {
@@ -53,6 +52,7 @@ header.container-fluid {
 }
 
 .kolom.artikel {
+  padding-bottom: 80px;
   width: 70%;
   @include layar(tablet) {
     width: 100%;

@@ -5,6 +5,7 @@ $h1size: 64px;
 $psize: 17px;
 $hp: 414px;
 $tablet: 768px;
+$laptop: 992px;
 
 @mixin layar($media) {
   @if $media == hp {
@@ -12,5 +13,8 @@ $tablet: 768px;
   }
   @else if $media == tablet {
     @media only screen and (max-width: $tablet) { @content; }
+  }
+  @else if $media == laptop {
+    @media only screen and (max-width: $laptop) { @content; }
   }
 }

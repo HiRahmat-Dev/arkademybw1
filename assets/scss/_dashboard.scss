@@ -3,8 +3,291 @@
 */
 
 
+nav {
+  display: flex;
+  box-shadow: 0 4px 7px #0000003a;
+  padding: 12px 3%;
+  justify-content: space-between;
+  form.search {
+    .grup-search {
+      width: 406px;
+    }
+  }
+}
+#menu-profil nav {
+  display: flex;
+  box-shadow: none;
+  padding: 24px 0 0 3%;
+  justify-content: flex-end;
+}
+.burger a {
+  cursor: pointer;
+  margin: 0 16px 0 0;
+  padding: 8px;
+}
+
+.navbar ul, .navbar, .search, .logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  @include layar(laptop) {
+    display: none;
+  }
+  li {
+    overflow: hidden;
+    padding: 4px;
+    a {
+      position: relative;
+      padding: 8px 24px 8px 8px;
+      color: black;
+      &::after {
+        margin: 5px 0 0 8px;
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url('../img/polygon-arrow.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+form.search {
+  @include layar(tablet) {
+    display: none;
+  }
+  .grup-search{
+    display: flex;
+    justify-content: center;
+    // width: 406px;
+    border-radius: 20px;
+    border: 1px solid #CACACA;
+    overflow: hidden;
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    img {
+      padding: 6px;
+    }
+    input {
+      width: 75%;
+      border: none;
+      outline: none;
+      padding: 0 6px;
+      color: black;
+      font-size: 17px;
+      &::placeholder {
+        color: #CACACA;
+      }
+    }
+  }
+}
+
+.logo {
+  img {
+    width: 50px;
+    margin-right: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+section.list-book {
+  padding: 0 3%;
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 48px;
+    margin-top: 48px;
+    color: #424242;
+  }
+}
+
+.book {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  .kolom {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding: 35px 17px;
+    @include layar(hp) {
+      width: 97%;
+      padding: 35px 0;
+    }
+    .card {
+      width: 320px;
+      height: 340px;
+      @include layar(hp) {
+        width: 100%;
+      }
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      h3 {
+        width: 70%;
+        height: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 auto;
+        font-size: 22px;
+        font-weight: bold;
+        color: #424242;
+        text-align: center;
+        margin-top: 8px;
+      }
+      p {
+        margin: 0 5%;
+        font-size: 15px;
+        line-height: 20px;
+        color: #424242;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 18px;
+      }
+    }
+  }
+}
+
+.menu-aktif {
+  margin-left: 25vw;
+  width: 75vw;
+  @include layar(laptop) {
+    width: 80vw;
+    margin-left: 20vw;
+  }
+  @include layar(tablet) {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+
+.geser-kiri {
+  position: absolute;
+  top: 0;
+  left: -25vw;
+  @include layar(laptop) {
+    left: -50vw;
+  }
+  @include layar(tablet) {
+    left: -95vw;
+  }
+}
+.geser-kanan {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+#menu-profil {
+  position: fixed;
+  top: 0;
+  width: 25vw;
+  @include layar(laptop) {
+    width: 50vw;
+  }
+  @include layar(tablet) {
+    width: 90vw;
+  }
+  height: 100%;
+  background-color: white;
+  box-shadow: 4px 0 7px #0000003a;
+  @include layar(tablet) {
+    overflow: scroll;
+  }
+  .container.center {
+    display: flex;
+    justify-content: center;
+    .foto-profil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 12px;
+      h2 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 16px;
+        color: black;
+      }
+    }
+
+  }
+
+  .container {
+    form.search {
+      @include layar(tablet) {
+        display: flex;
+        margin-top: 48px;
+      }
+      display: none;
+      .grup-search {
+        @include layar(tablet) {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.nav-aside {
+  margin-top: 72px;
+  margin-bottom: 72px;
+  > li {
+    &:first-child {
+      display: none;
+      @include layar(laptop) {
+        display: flex;
+      }
+      margin-top: 0;
+    }
+    &:nth-child(2) {
+      display: none;
+      @include layar(laptop) {
+        display: flex;
+      }
+    }
+    margin-top: 42px;
+    a {
+      font-size: 25px;
+      color: black;
+      &:hover {
+        color: #868686;
+      }
+    }
+  }
+}
 
 
+.container-fluid, #menu-profil, .burger a, .kolom, .baris, .card {
+  transition: ease .8s;
+}
+
+.fade-out {
+  top: 24px;
+  // opacity: 0;
+  margin-left: -100px !important;
+  // position: absolute;
+  // left: -20px;
+}
 
 
 
