@@ -175,37 +175,6 @@ section.list-book {
   }
 }
 
-.menu-aktif {
-  margin-left: 25vw;
-  width: 75vw;
-  @include layar(laptop) {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-  @include layar(tablet) {
-    width: 100vw;
-    margin-left: 0;
-  }
-}
-
-.geser-kiri {
-  position: absolute;
-  top: 0;
-  left: -25vw;
-  @include layar(laptop) {
-    left: -50vw;
-  }
-  @include layar(tablet) {
-    left: -95vw;
-  }
-}
-.geser-kanan {
-  position: absolute;
-  opacity: 1;
-  top: 0;
-  left: 0;
-}
-
 #menu-profil {
   position: fixed;
   top: 0;
@@ -291,6 +260,38 @@ section.list-book {
 .container-fluid, #menu-profil, .burger a {
   transition: width ease .7s, margin ease .7s, left ease .7s;
 }
+
+
+.menu-aktif {
+  margin-left: 25vw;
+  width: 75vw;
+  @include layar(laptop) {
+    width: 80vw;
+    margin-left: 20vw;
+  }
+  @include layar(tablet) {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+
+.geser-kiri {
+  position: absolute;
+  top: 0;
+  left: -25vw;
+  @include layar(laptop) {
+    left: -50vw;
+  }
+  @include layar(tablet) {
+    left: -95vw;
+  }
+}
+.geser-kanan {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 .fade-out {
   top: 24px;

@@ -152,6 +152,7 @@ body, input {
 .bg-modal {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -171,6 +172,11 @@ body, input {
   overflow: hidden;
   transition: transform ease 0.2s;
 }
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content {
+    width: 95%;
+  }
+}
 .bg-modal .modal-content .close {
   border: none;
   background-color: transparent;
@@ -186,9 +192,19 @@ body, input {
 .bg-modal .modal-content .modal-container {
   margin: 34px 42px;
 }
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container {
+    margin: 20px 20px;
+  }
+}
 .bg-modal .modal-content .modal-container h2 {
   font-size: 40px;
   color: black;
+}
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container h2 {
+    font-size: 30px;
+  }
 }
 .bg-modal .modal-content .modal-container form .baris {
   margin-top: 38px;
@@ -196,17 +212,43 @@ body, input {
 .bg-modal .modal-content .modal-container form .baris:first-child {
   margin-top: 80px;
 }
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form .baris {
+    margin-top: 20px;
+  }
+}
 .bg-modal .modal-content .modal-container form .baris .kolom-3 {
   width: 25%;
   display: flex;
   padding-top: 24px;
 }
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form .baris .kolom-3 {
+    width: 40%;
+    padding-top: 12px;
+  }
+}
 .bg-modal .modal-content .modal-container form .baris .kolom-9 {
   width: 75%;
+}
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form .baris .kolom-9 {
+    width: 60%;
+  }
 }
 .bg-modal .modal-content .modal-container form label {
   font-size: 30px;
   color: black;
+}
+@media only screen and (max-width: 768px) {
+  .bg-modal .modal-content .modal-container form label {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form label {
+    font-size: 1em;
+  }
 }
 .bg-modal .modal-content .modal-container form input, .bg-modal .modal-content .modal-container form textarea {
   resize: none;
@@ -218,6 +260,12 @@ body, input {
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   outline: none;
+}
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form input, .bg-modal .modal-content .modal-container form textarea {
+    font-size: 1em;
+    padding: 12px 15px;
+  }
 }
 .bg-modal .modal-content .modal-container form .btn-modal {
   transition: background-color ease 0.2s;
@@ -241,14 +289,24 @@ body, input {
 .bg-modal .modal-content .modal-container form .btn-modal:hover {
   background-color: #fdd347;
 }
+@media only screen and (max-width: 768px) {
+  .bg-modal .modal-content .modal-container form .btn-modal {
+    padding: 12px 0;
+    font-size: 25px;
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .bg-modal .modal-content .modal-container form .btn-modal {
+    padding: 12px 0;
+    font-size: 25px;
+    width: 100%;
+  }
+}
 
 .modal-active {
   visibility: visible;
   opacity: 1;
-}
-
-.zoom-in {
-  transform: scale(1);
 }
 
 /* 
@@ -626,46 +684,6 @@ section.list-book h2 {
   margin-top: 18px;
 }
 
-.menu-aktif {
-  margin-left: 25vw;
-  width: 75vw;
-}
-@media only screen and (max-width: 992px) {
-  .menu-aktif {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .menu-aktif {
-    width: 100vw;
-    margin-left: 0;
-  }
-}
-
-.geser-kiri {
-  position: absolute;
-  top: 0;
-  left: -25vw;
-}
-@media only screen and (max-width: 992px) {
-  .geser-kiri {
-    left: -50vw;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .geser-kiri {
-    left: -95vw;
-  }
-}
-
-.geser-kanan {
-  position: absolute;
-  opacity: 1;
-  top: 0;
-  left: 0;
-}
-
 #menu-profil {
   position: fixed;
   top: 0;
@@ -756,6 +774,45 @@ section.list-book h2 {
 
 .container-fluid, #menu-profil, .burger a {
   transition: width ease 0.7s, margin ease 0.7s, left ease 0.7s;
+}
+
+.menu-aktif {
+  margin-left: 25vw;
+  width: 75vw;
+}
+@media only screen and (max-width: 992px) {
+  .menu-aktif {
+    width: 80vw;
+    margin-left: 20vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu-aktif {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+
+.geser-kiri {
+  position: absolute;
+  top: 0;
+  left: -25vw;
+}
+@media only screen and (max-width: 992px) {
+  .geser-kiri {
+    left: -50vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .geser-kiri {
+    left: -95vw;
+  }
+}
+
+.geser-kanan {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .fade-out {
@@ -907,10 +964,10 @@ header.container-fluid .grup-edit .edit {
   font-size: 20px;
 }
 .kolom.artikel .baris p.deskripsi {
-  margin-top: 42px;
+  margin-top: 20px;
   color: black;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 30px;
   font-weight: 300;
 }
 @media only screen and (max-width: 768px) {
