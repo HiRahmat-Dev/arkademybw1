@@ -279,6 +279,7 @@ section.list-book {
     a {
       font-size: 25px;
       color: black;
+      cursor: pointer;
       &:hover {
         color: #868686;
       }
@@ -287,8 +288,8 @@ section.list-book {
 }
 
 
-.container-fluid, #menu-profil, .burger a, .kolom, .baris, .card {
-  transition: ease .5s;
+.container-fluid, #menu-profil, .burger a {
+  transition: width ease .7s, margin ease .7s, left ease .7s;
 }
 
 .fade-out {

@@ -149,6 +149,108 @@ body, input {
   border: 2px solid black;
 }
 
+.bg-modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(141, 141, 141, 0.541);
+  transition: visibilty ease 1s, opacity ease 0.4s;
+}
+.bg-modal .modal-content {
+  transform: scale(0.2);
+  position: relative;
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform ease 0.2s;
+}
+.bg-modal .modal-content .close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.bg-modal .modal-content .close img {
+  width: 24px;
+}
+.bg-modal .modal-content .modal-container {
+  margin: 34px 42px;
+}
+.bg-modal .modal-content .modal-container h2 {
+  font-size: 40px;
+  color: black;
+}
+.bg-modal .modal-content .modal-container form .baris {
+  margin-top: 38px;
+}
+.bg-modal .modal-content .modal-container form .baris:first-child {
+  margin-top: 80px;
+}
+.bg-modal .modal-content .modal-container form .baris .kolom-3 {
+  width: 25%;
+  display: flex;
+  padding-top: 24px;
+}
+.bg-modal .modal-content .modal-container form .baris .kolom-9 {
+  width: 75%;
+}
+.bg-modal .modal-content .modal-container form label {
+  font-size: 30px;
+  color: black;
+}
+.bg-modal .modal-content .modal-container form input, .bg-modal .modal-content .modal-container form textarea {
+  resize: none;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: #C8BABA;
+  padding: 18px 22px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.bg-modal .modal-content .modal-container form .btn-modal {
+  transition: background-color ease 0.2s;
+  cursor: pointer;
+  margin-left: auto;
+  color: white;
+  background-color: #FBCC38;
+  font-size: 30px;
+  width: 204px;
+  text-align: center;
+  padding: 18px 0;
+  border: none;
+  border-radius: 10px;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:active {
+  outline: none;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:focus {
+  outline: none;
+}
+.bg-modal .modal-content .modal-container form .btn-modal:hover {
+  background-color: #fdd347;
+}
+
+.modal-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.zoom-in {
+  transform: scale(1);
+}
+
 /* 
 ! AUTH
 */
@@ -646,13 +748,14 @@ section.list-book h2 {
 .nav-aside > li a {
   font-size: 25px;
   color: black;
+  cursor: pointer;
 }
 .nav-aside > li a:hover {
   color: #868686;
 }
 
-.container-fluid, #menu-profil, .burger a, .kolom, .baris, .card {
-  transition: ease 0.5s;
+.container-fluid, #menu-profil, .burger a {
+  transition: width ease 0.7s, margin ease 0.7s, left ease 0.7s;
 }
 
 .fade-out {
@@ -870,94 +973,6 @@ header.container-fluid .grup-edit .edit {
 .btn-pinjam:active {
   transform: translateY(2px);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.13);
-}
-
-.bg-modal {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(141, 141, 141, 0.541);
-}
-.bg-modal .modal-content {
-  position: relative;
-  width: 80%;
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.bg-modal .modal-content .close {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  cursor: pointer;
-  padding: 2px 4px;
-}
-.bg-modal .modal-content .close img {
-  width: 24px;
-}
-.bg-modal .modal-content .modal-container {
-  margin: 34px 42px;
-}
-.bg-modal .modal-content .modal-container h2 {
-  font-size: 40px;
-  color: black;
-}
-.bg-modal .modal-content .modal-container form .baris {
-  margin-top: 38px;
-}
-.bg-modal .modal-content .modal-container form .baris:first-child {
-  margin-top: 80px;
-}
-.bg-modal .modal-content .modal-container form .baris .kolom-3 {
-  width: 25%;
-  display: flex;
-  padding-top: 24px;
-}
-.bg-modal .modal-content .modal-container form .baris .kolom-9 {
-  width: 75%;
-}
-.bg-modal .modal-content .modal-container form label {
-  font-size: 30px;
-  color: black;
-}
-.bg-modal .modal-content .modal-container form input, .bg-modal .modal-content .modal-container form textarea {
-  resize: none;
-  box-sizing: border-box;
-  font-size: 30px;
-  color: #C8BABA;
-  padding: 18px 22px;
-  width: 100%;
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-}
-.bg-modal .modal-content .modal-container form .btn-modal {
-  transition: 0.2s;
-  cursor: pointer;
-  margin-left: auto;
-  color: white;
-  background-color: #FBCC38;
-  font-size: 30px;
-  width: 204px;
-  text-align: center;
-  padding: 18px 0;
-  border: none;
-  border-radius: 10px;
-}
-.bg-modal .modal-content .modal-container form .btn-modal:active {
-  outline: none;
-}
-.bg-modal .modal-content .modal-container form .btn-modal:focus {
-  outline: none;
-}
-.bg-modal .modal-content .modal-container form .btn-modal:hover {
-  background-color: #fdd347;
 }
 
 /* 

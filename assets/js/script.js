@@ -18,12 +18,26 @@ for (let i = 0; i < burger.length; i++) {
 
 
 let dataModal = document.querySelector('.bg-modal');
-let edit = document.querySelector('.grup-edit .edit');
+let modalContent = document.querySelector('.modal-content');
+let panggilModal = document.querySelectorAll('.panggil-modal');
 let close = document.querySelector('button.close');
 
-edit.addEventListener('click', function() {
-  dataModal.style.display = 'flex';
-});
-close.addEventListener('click', function() {
-  dataModal.style.display = 'none';
-});
+let tampilModal = () => {
+  dataModal.classList.add('modal-active');
+  modalContent.style.transform = 'scale(1)';
+}
+let tutupModal = () => {
+  dataModal.classList.remove('modal-active');
+  modalContent.style.transform = 'scale(0)';
+}
+for (let i = 0; i < panggilModal.length; i++) {
+  panggilModal[i].onclick = tampilModal;
+  modalContent.style.transform = 'scale(0)';
+}
+close.onclick = tutupModal;
+window.onclick = (event) => {
+  if (event.target == dataModal) {
+    dataModal.classList.remove('modal-active');
+    modalContent.style.transform = 'scale(0)';
+  }
+}
