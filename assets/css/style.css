@@ -164,7 +164,7 @@ body, input {
   transition: visibilty ease 1s, opacity ease 0.4s;
 }
 .bg-modal .modal-content {
-  transform: scale(0.2);
+  transform: scale(0.8);
   position: relative;
   width: 80%;
   background-color: white;

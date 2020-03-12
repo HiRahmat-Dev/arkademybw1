@@ -29,21 +29,21 @@ let tampilModal = () => {
 }
 let tutupModal = () => {
   dataModal.classList.remove('modal-active');
-  modalContent.style.transform = 'scale(0)';
+  modalContent.style.transform = 'scale(0.8)';
 }
 
 
 
 for (let i = 0; i < panggilModal.length; i++) {
   panggilModal[i].onclick = tampilModal;
-  modalContent.style.transform = 'scale(0)';
+  modalContent.style.transform = 'scale(0.8)';
 }
 
 close.onclick = tutupModal;
 window.onclick = (event) => {
   if (event.target == dataModal) {
     dataModal.classList.remove('modal-active');
-    modalContent.style.transform = 'scale(0)';
+    modalContent.style.transform = 'scale(0.8)';
   }
 }
 
