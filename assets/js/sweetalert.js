@@ -1,3 +1,4 @@
+let modalDel = document.querySelector('.modal-del');
 modalDel.onclick = function() {
   Swal.fire({
     title: 'Are you sure?',

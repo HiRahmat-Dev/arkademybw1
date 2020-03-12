@@ -20,7 +20,6 @@ for (let i = 0; i < burger.length; i++) {
 let dataModal = document.querySelector('.bg-modal');
 let modalContent = document.querySelector('.modal-content');
 let panggilModal = document.querySelectorAll('.panggil-modal');
-let modalDel = document.querySelector('.modal-del')
 let close = document.querySelector('button.close');
 
 let tampilModal = () => {
