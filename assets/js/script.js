@@ -50,3 +50,6 @@ window.onclick = (event) => {
 
 
 
+// kalo nexButton diklik, pindah ke kanan
+//    gimana supaya semua ikut pindah?
+//    
