@@ -55,8 +55,7 @@ modalDel.onclick = function() {
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#d33',
-    confirmButtonText: 'Yes, delete it!',
-    reverseButtons: true
+    confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.value) {
       Swal.fire({
