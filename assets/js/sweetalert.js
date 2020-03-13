@@ -13,7 +13,7 @@ modalDel.onclick = function() {
         title: 'Deleted!',
         text: 'Data Dilan 1990 berhasil dihapus!',
         icon: 'success',
-        confirmButtonColor: '#2aa745'
+        confirmButtonColor: '#FBCC38'
       })
     }
   })

@@ -12,9 +12,9 @@ for (let i = 0; i < burger.length; i++) {
       menuProfil.classList.replace('geser-kanan', 'geser-kiri');
       allPage.classList.remove('menu-aktif');
       burger[0].classList.remove('fade-out');
-    }
+    };
   });
-}
+};
 
 
 const dataModal = document.querySelector('.bg-modal');
@@ -23,31 +23,44 @@ const panggilModal = document.querySelectorAll('.panggil-modal');
 const close = document.querySelector('button.close');
 
 let tampilModal = () => {
-  dataModal.classList.add('modal-active');
+  dataModal.classList.toggle('modal-active');
   modalContent.style.transform = 'scale(1)';
-}
+};
 
 let tutupModal = () => {
-  dataModal.classList.remove('modal-active');
+  dataModal.classList.toggle('modal-active');
   modalContent.style.transform = 'scale(0.8)';
-}
+};
 
-for (let i = 0; i < panggilModal.length; i++) {
-  panggilModal[i].onclick = tampilModal;
+
+
+panggilModal.forEach( modal => {
+  modal.onclick = tampilModal;
   modalContent.style.transform = 'scale(0.8)';
-}
+});
+//* atau bisa pakai for() {};
+// for (let i = 0; i < panggilModal.length; i++) {
+//   panggilModal[i].onclick = tampilModal;
+//   modalContent.style.transform = 'scale(0.8)';
+// };
+
+
+
 
 close.onclick = tutupModal;
-window.onclick = (e) => {
+window.onclick = e => {
   if (e.target == dataModal) {
-    dataModal.classList.remove('modal-active');
+    dataModal.classList.toggle('modal-active');
     modalContent.style.transform = 'scale(0.8)';
-  }
-}
-
+  };
+};
 
 
 
 // kalo nexButton diklik, pindah ke kanan
 //    gimana supaya semua ikut pindah?
 //    
+
+
+
+

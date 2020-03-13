@@ -650,10 +650,19 @@ form.search .grup-search input::placeholder {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
   cursor: pointer;
   z-index: 100;
+  transition: ease 0.2s;
 }
 .carousel button:focus {
   border: none;
   outline: none;
+}
+.carousel button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.13);
+}
+.carousel button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
 }
 .carousel button img {
   margin-top: 3px;
