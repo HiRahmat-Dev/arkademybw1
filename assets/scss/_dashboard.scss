@@ -233,6 +233,7 @@ section.list-book {
           img {
             width: 100%;
             object-fit: cover;
+            transform: scale(1.005);
             transition: transform ease .3s;
             &:hover {
               transform: scale(1.05);
