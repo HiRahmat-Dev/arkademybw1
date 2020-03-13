@@ -592,7 +592,7 @@ form.search .grup-search {
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  border: 1px solid #CACACA;
+  border: 1.2px solid #CACACA;
   overflow: hidden;
 }
 form.search .grup-search button {
@@ -613,7 +613,7 @@ form.search .grup-search input {
   width: 75%;
   border: none;
   outline: none;
-  padding: 0 6px;
+  padding: 9px 6px;
   color: black;
   font-size: 17px;
 }
@@ -722,24 +722,35 @@ section.list-book h2 {
     padding: 35px 0;
   }
 }
-.book .kolom .card {
+.book .kolom a {
   width: 320px;
   height: 340px;
+}
+@media only screen and (max-width: 414px) {
+  .book .kolom a {
+    width: 100%;
+  }
+}
+.book .kolom a .card {
+  width: 100%;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   overflow: hidden;
 }
-@media only screen and (max-width: 414px) {
-  .book .kolom .card {
-    width: 100%;
-  }
-}
-.book .kolom .card img {
+.book .kolom a .card .container-thumb {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  overflow: hidden;
 }
-.book .kolom .card h3 {
+.book .kolom a .card .container-thumb img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform ease 0.3s;
+}
+.book .kolom a .card .container-thumb img:hover {
+  transform: scale(1.05);
+}
+.book .kolom a .card h3 {
   width: 70%;
   height: 24px;
   white-space: nowrap;
@@ -752,7 +763,7 @@ section.list-book h2 {
   text-align: center;
   margin-top: 8px;
 }
-.book .kolom .card p {
+.book .kolom a .card p {
   margin: 0 5%;
   font-size: 15px;
   line-height: 20px;
