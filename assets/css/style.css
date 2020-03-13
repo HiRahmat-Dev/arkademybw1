@@ -725,6 +725,8 @@ section.list-book h2 {
 .book .kolom a {
   width: 320px;
   height: 340px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
 @media only screen and (max-width: 414px) {
   .book .kolom a {
@@ -733,8 +735,6 @@ section.list-book h2 {
 }
 .book .kolom a .card {
   width: 100%;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
   overflow: hidden;
 }
 .book .kolom a .card .container-thumb {

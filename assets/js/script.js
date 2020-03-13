@@ -1,6 +1,6 @@
-let burger = document.querySelectorAll('.burger a');
-let menuProfil = document.getElementById('menu-profil');
-let allPage = document.querySelector('.container-fluid');
+const burger = document.querySelectorAll('.burger a');
+const menuProfil = document.getElementById('menu-profil');
+const allPage = document.querySelector('.container-fluid');
 
 for (let i = 0; i < burger.length; i++) {
   burger[i].addEventListener('click', function() {
@@ -17,21 +17,20 @@ for (let i = 0; i < burger.length; i++) {
 }
 
 
-let dataModal = document.querySelector('.bg-modal');
-let modalContent = document.querySelector('.modal-content');
-let panggilModal = document.querySelectorAll('.panggil-modal');
-let close = document.querySelector('button.close');
+const dataModal = document.querySelector('.bg-modal');
+const modalContent = document.querySelector('.modal-content');
+const panggilModal = document.querySelectorAll('.panggil-modal');
+const close = document.querySelector('button.close');
 
 let tampilModal = () => {
   dataModal.classList.add('modal-active');
   modalContent.style.transform = 'scale(1)';
 }
+
 let tutupModal = () => {
   dataModal.classList.remove('modal-active');
   modalContent.style.transform = 'scale(0.8)';
 }
-
-
 
 for (let i = 0; i < panggilModal.length; i++) {
   panggilModal[i].onclick = tampilModal;
@@ -39,8 +38,8 @@ for (let i = 0; i < panggilModal.length; i++) {
 }
 
 close.onclick = tutupModal;
-window.onclick = (event) => {
-  if (event.target == dataModal) {
+window.onclick = (e) => {
+  if (e.target == dataModal) {
     dataModal.classList.remove('modal-active');
     modalContent.style.transform = 'scale(0.8)';
   }
