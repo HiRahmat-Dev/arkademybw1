@@ -322,6 +322,7 @@ section.list-book {
   @include layar(tablet) {
     overflow: scroll;
   }
+  z-index: 1000;
   .container.center {
     display: flex;
     justify-content: center;
