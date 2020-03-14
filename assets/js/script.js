@@ -57,6 +57,32 @@ window.onclick = e => {
 
 
 
+const track = document.querySelector('.track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.next-btn');
+const prevButton = document.querySelector('.prev-btn');
+const currentSlide = track.querySelector('.current__slide')
+const slideWidth = slides[0].clientWidth;
+
+
+let urutan = 1;
+track.style.transform = `translateX(${-slideWidth * urutan}px)`;
+
+nextButton.addEventListener('click', () => {
+
+  urutan++;
+  track.style.transform = `translateX(${-slideWidth * urutan}px)`;
+});
+
+prevButton.addEventListener('click', () => {
+
+  urutan--;
+  track.style.transform = `translateX(${-slideWidth * urutan}px)`;
+});
+
+
+// console.log();
+
 // kalo nexButton diklik, pindah ke kanan
 //    gimana supaya semua ikut pindah?
 //    

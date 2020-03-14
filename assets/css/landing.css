@@ -61,6 +61,7 @@ p.text-logo {
     font-weight: bold;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 860px !important;
@@ -75,16 +76,19 @@ p.text-logo {
     font-weight: bold;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px !important;
   }
 }
+
 @media (min-width: 1700px) {
   .container {
     max-width: 1600px !important;
   }
 }
+
 .overflow-hidden {
   position: relative;
   width: 100%;

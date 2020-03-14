@@ -457,6 +457,7 @@ form .grup-input input:focus {
 }
 form .baris {
   margin-top: 32px;
+  margin-bottom: 42px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -473,8 +474,10 @@ form .baris .grup-checkbox input {
   height: 18px;
 }
 form .baris a {
-  text-decoration: none;
   color: #424242;
+}
+form .baris a:hover {
+  text-decoration: underline;
 }
 form .grup-btn {
   margin-top: 24px;
@@ -531,6 +534,9 @@ footer p a {
   margin-left: 36px;
   color: black;
 }
+.nav .logo:hover {
+  opacity: 0.7;
+}
 .nav .logo img {
   width: 50px;
   margin-right: 12px;
@@ -567,6 +573,9 @@ footer p a {
 .navbar ul li {
   overflow: hidden;
   padding: 4px;
+}
+.navbar ul li:hover {
+  opacity: 0.7;
 }
 .navbar ul li a {
   position: relative;
@@ -622,26 +631,17 @@ form.search .grup-search input::placeholder {
 }
 
 .carousel {
-  perspective: 1000px;
   position: relative;
   display: flex;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   height: 400px;
   align-items: center;
-}
-.carousel .carousel-wrap {
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-}
-.carousel .carousel-wrap::-webkit-scrollbar {
-  display: none;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .carousel button {
-  position: fixed;
+  position: absolute;
   border: none;
   background-color: white;
   width: 60px;
@@ -669,28 +669,15 @@ form.search .grup-search input::placeholder {
   margin-right: 2px;
 }
 
-button.next-btn {
-  left: 4%;
-}
-
-button.prev-btn {
-  right: 4%;
-}
-button.prev-btn img {
-  transform: rotate(180deg);
+.carousel .carousel-wrap {
+  display: flex;
+  width: 480px;
+  transition: transform 0.3s ease;
 }
 
 .carousel-item {
-  transition: transform 1s ease;
-  padding: 0 60px;
-}
-.carousel-item img {
-  width: 480px;
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  padding: 0 80px 0 0;
+  transition: transform 0.3s ease;
 }
 .carousel-item:first-child {
   padding-left: 0;
@@ -698,9 +685,59 @@ button.prev-btn img {
 .carousel-item:last-child {
   padding-right: 0;
 }
+.carousel-item:hover img {
+  transform: scale(1.07);
+}
+.carousel-item .carousel-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  width: 480px;
+  height: 250px;
+}
+.carousel-item .carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform ease 0.5s;
+}
+.carousel-item .carousel-card .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.281);
+  color: white;
+  padding: 26px 36px 36px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.carousel-item .carousel-card .description h3 {
+  font-size: 37px;
+}
+.carousel-item .carousel-card .description p {
+  font-family: "Airbnb Cereal App Book";
+  margin-top: 16px;
+}
+.carousel-item .carousel-card .description h3, .carousel-item .carousel-card .description p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button.next-btn {
+  right: 4%;
+}
+button.next-btn img {
+  transform: rotate(180deg);
+}
+
+button.prev-btn {
+  left: 4%;
+}
 
 .current__slide {
-  transform: scale(1.2);
+  transform: scale(1.14);
 }
 
 section.list-book {
@@ -736,6 +773,7 @@ section.list-book h2 {
   height: 340px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+  overflow: hidden;
 }
 @media only screen and (max-width: 414px) {
   .book .kolom a {
@@ -744,7 +782,6 @@ section.list-book h2 {
 }
 .book .kolom a .card {
   width: 100%;
-  overflow: hidden;
 }
 .book .kolom a .card .container-thumb {
   width: 100%;
@@ -755,10 +792,10 @@ section.list-book h2 {
   width: 100%;
   object-fit: cover;
   transform: scale(1.005);
-  transition: transform ease 0.3s;
+  transition: transform ease 0.5s;
 }
 .book .kolom a .card .container-thumb img:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 .book .kolom a .card h3 {
   width: 70%;
@@ -766,12 +803,11 @@ section.list-book h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 0 auto;
+  margin: 12px auto 0;
   font-size: 22px;
   font-weight: bold;
   color: #424242;
   text-align: center;
-  margin-top: 8px;
 }
 .book .kolom a .card p {
   margin: 0 5%;
@@ -868,7 +904,7 @@ section.list-book h2 {
   cursor: pointer;
 }
 .nav-aside > li a:hover {
-  color: #868686;
+  opacity: 0.7;
 }
 
 .container-fluid, #menu-profil, .burger a {

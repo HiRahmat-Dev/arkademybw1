@@ -154,6 +154,10 @@ form {
   }
 
   .baris {
+    margin-top: 32px;
+    margin-bottom: 42px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     .grup-checkbox {
       display: flex;
       align-content: center;
@@ -166,12 +170,12 @@ form {
         height: 18px;
       }      
     }
-    margin-top: 32px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
     a {
-      text-decoration: none;
-      color: $primaryColor
+      color: $primaryColor;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
