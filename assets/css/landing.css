@@ -126,6 +126,10 @@ p.text-logo {
   bottom: 5vh;
 }
 
+.lh-1 {
+  line-height: 55px !important;
+}
+
 p.cta {
   font-size: 45px;
   font-weight: bold;
