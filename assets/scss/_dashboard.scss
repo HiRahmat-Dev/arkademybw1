@@ -59,13 +59,13 @@
   li {
     overflow: hidden;
     padding: 4px;
-    &:hover {
-      opacity: .7;
-    }
     a {
       position: relative;
       padding: 8px 24px 8px 8px;
       color: black;
+      &:hover {
+        opacity: .7;
+      }
       &::after {
         margin: 5px 0 0 8px;
         position: absolute;
@@ -76,6 +76,45 @@
         background-repeat: no-repeat;
       }
     }
+  }
+
+  .dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 25px;
+    width: 130px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.13);
+    overflow-y: scroll;
+    max-height: 0;
+    transition: all .4s;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #dbdbdb;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 10px;
+    }
+    li {
+      box-sizing: border-box;
+      padding: 17px 17px 32px;
+      width: 100%;
+      cursor: pointer;
+      font-size: .8em;
+      &:hover {
+        background-color: rgb(245, 245, 245);
+      }
+    }
+  }
+  .muncul {
+    max-height: 140px;
   }
 }
 
@@ -331,7 +370,19 @@ section.list-book {
   background-color: white;
   box-shadow: 4px 0 7px #0000003a;
   @include layar(tablet) {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #dbdbdb;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 10px;
+    }
   }
   z-index: 5;
   .container.center {
@@ -373,11 +424,32 @@ section.list-book {
 .nav-aside {
   margin-top: 72px;
   margin-bottom: 72px;
-  > li {
+  li {
+    margin-top: 42px;
+    a {
+      position: relative;
+      width: 100%;
+      font-size: 25px;
+      color: black;
+      cursor: pointer;
+      &:hover {
+        opacity: .7;
+      }
+      &::after {
+        margin: 11px 0 0 10px;
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url('../img/polygon-arrow.png');
+        background-repeat: no-repeat;
+      }
+    }
     &:first-child {
       display: none;
       @include layar(laptop) {
         display: flex;
+        flex-direction: column;
       }
       margin-top: 0;
     }
@@ -385,16 +457,50 @@ section.list-book {
       display: none;
       @include layar(laptop) {
         display: flex;
+        flex-direction: column;
       }
     }
-    margin-top: 42px;
-    a {
-      font-size: 25px;
-      color: black;
-      cursor: pointer;
-      &:hover {
-        opacity: .7;
+    // a.waktu, a.kategori {
+    //   display: flex;
+    //   img {
+    //     width: 14px;
+    //     object-fit: contain;
+    //     margin-left: 8px;
+    //   }
+    // }
+    .dropdown {
+      margin-top: 0;
+      position: relative;
+      width: 150px;
+      left: 0;
+      box-shadow: none;
+      width: 100%;
+      overflow-y: scroll;
+      max-height: 0;
+      transition: all .4s;
+      &::-webkit-scrollbar {
+        width: 5px;
       }
+      &::-webkit-scrollbar-thumb {
+        background-color: #dbdbdb;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+      li {
+        padding: 20px;
+        margin-top: 0;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(245, 245, 245);
+        }
+      }
+    }
+    .dropdown.muncul {
+      max-height: 160px;
+      margin-top: 20px;
     }
   }
 }

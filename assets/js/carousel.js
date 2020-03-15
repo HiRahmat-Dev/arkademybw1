@@ -1,5 +1,3 @@
-
-
 const track = document.querySelector('.track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.next-btn');
@@ -15,6 +13,7 @@ const zoomIn = (currentSlide, targetSlide) => {
   targetSlide.classList.add('current__slide');
 }
 
+
 nextButton.addEventListener('click', () => {
   const currentSlide = track.querySelector('.current__slide');
   const nextSlide = currentSlide.nextElementSibling;
@@ -25,10 +24,8 @@ nextButton.addEventListener('click', () => {
 });
 
 
-// console.log(slides);
 
-prevButton.addEventListener('click', () => {
-  
+prevButton.addEventListener('click', () => { 
   const currentSlide = track.querySelector('.current__slide');
   const prevSlide = currentSlide.previousElementSibling;
   const widthPrevSlide = prevSlide.clientWidth;
@@ -37,12 +34,35 @@ prevButton.addEventListener('click', () => {
   track.style.transform = `translateX(${-widthPrevSlide * urutan}px)`;
 });
 
+const kategori = document.querySelectorAll('.kategori');
+const waktu = document.querySelectorAll('.waktu');
+kategori.forEach(k => {
+  k.addEventListener('click', () => {
+    k.nextElementSibling.classList.toggle('muncul');
+  });
+  const daftarKategori = Array.from(k.nextElementSibling.children);
+  daftarKategori.forEach(dk => {
+    dk.addEventListener('click', () => {
+      k.innerHTML = dk.innerHTML;
+      k.nextElementSibling.classList.remove('muncul');
+    });
+  });
+})
 
-// console.log();
+waktu.forEach(w => {
+  w.addEventListener('click', () => {
+    w.nextElementSibling.classList.toggle('muncul');
+  });
+  const daftarWaktu = Array.from(w.nextElementSibling.children);
+  daftarWaktu.forEach(dw => {
+    dw.addEventListener('click', () => {
+      w.innerHTML = dw.innerHTML;
+      w.nextElementSibling.classList.remove('muncul');
+    });
+  });
+})
 
-// kalo nexButton diklik, pindah ke kanan
-//    gimana supaya semua ikut pindah?
-//    
+
 
 
 
