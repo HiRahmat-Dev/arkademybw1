@@ -67,6 +67,7 @@ body, input {
   align-items: center;
   background-color: rgba(141, 141, 141, 0.541);
   transition: visibilty ease 1s, opacity ease .4s;
+  z-index: 10;
   .modal-content {
     transform: scale(.8);
     position: relative;

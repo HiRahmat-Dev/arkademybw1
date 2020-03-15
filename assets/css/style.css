@@ -166,6 +166,7 @@ body, input {
   align-items: center;
   background-color: rgba(141, 141, 141, 0.541);
   transition: visibilty ease 1s, opacity ease 0.4s;
+  z-index: 10;
 }
 .bg-modal .modal-content {
   transform: scale(0.8);
@@ -521,6 +522,8 @@ footer p a {
 ! DASHBOARD
 */
 .nav {
+  position: relative;
+  z-index: 3;
   display: flex;
   box-shadow: 0 4px 7px #0000003a;
   padding: 12px 3%;
@@ -640,6 +643,13 @@ form.search .grup-search input::placeholder {
   box-sizing: border-box;
   overflow: hidden;
 }
+.carousel .carousel-wrap {
+  display: flex;
+  width: 480px;
+  transition: transform 0.3s ease;
+  position: relative;
+  left: -60px;
+}
 .carousel button {
   position: absolute;
   border: none;
@@ -649,7 +659,7 @@ form.search .grup-search input::placeholder {
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.13);
   cursor: pointer;
-  z-index: 100;
+  z-index: 1;
   transition: ease 0.2s;
 }
 .carousel button:focus {
@@ -669,24 +679,10 @@ form.search .grup-search input::placeholder {
   margin-right: 2px;
 }
 
-.carousel .carousel-wrap {
-  display: flex;
-  width: 480px;
-  transition: transform 0.3s ease;
-}
-
 .carousel-item {
-  padding: 0 80px 0 0;
+  box-sizing: content-box !important;
+  padding: 0 40px 0;
   transition: transform 0.3s ease;
-}
-.carousel-item:first-child {
-  padding-left: 0;
-}
-.carousel-item:last-child {
-  padding-right: 0;
-}
-.carousel-item:hover img {
-  transform: scale(1.07);
 }
 .carousel-item .carousel-card {
   position: relative;
@@ -695,6 +691,15 @@ form.search .grup-search input::placeholder {
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
   width: 480px;
   height: 250px;
+}
+@media only screen and (max-width: 414px) {
+  .carousel-item .carousel-card {
+    transform: scale(0.75);
+    height: 100%;
+  }
+}
+.carousel-item .carousel-card:hover img {
+  transform: scale(1.07);
 }
 .carousel-item .carousel-card img {
   width: 100%;
@@ -712,7 +717,6 @@ form.search .grup-search input::placeholder {
   color: white;
   padding: 26px 36px 36px;
   box-sizing: border-box;
-  z-index: 1;
 }
 .carousel-item .carousel-card .description h3 {
   font-size: 37px;
@@ -737,18 +741,29 @@ button.prev-btn {
 }
 
 .current__slide {
-  transform: scale(1.14);
+  transform: scale(1.17);
+  margin: 0 20px;
 }
 
 section.list-book {
   padding: 0 3%;
+  margin: 40px 0 20px;
+}
+@media only screen and (max-width: 414px) {
+  section.list-book {
+    margin: 80px 0 20px;
+  }
 }
 section.list-book h2 {
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 48px;
-  margin-top: 48px;
   color: #424242;
+  margin: 0 0 20px;
+}
+@media only screen and (max-width: 414px) {
+  section.list-book h2 {
+    margin: 0;
+  }
 }
 
 .book {
@@ -826,7 +841,7 @@ section.list-book h2 {
   height: 100%;
   background-color: white;
   box-shadow: 4px 0 7px #0000003a;
-  z-index: 1000;
+  z-index: 5;
 }
 @media only screen and (max-width: 992px) {
   #menu-profil {
