@@ -320,7 +320,6 @@ body, input {
 #login .container-fluid, #register .container-fluid {
   display: flex;
   position: relative;
-  height: 110vh;
 }
 @media only screen and (max-width: 768px) {
   #login .container-fluid, #register .container-fluid {
@@ -328,8 +327,11 @@ body, input {
   }
 }
 
-#login .hero-auth {
+#login .container-fluid {
   height: 110vh;
+}
+#login .hero-auth {
+  height: 100%;
 }
 #login .hero-auth::after {
   content: "";
@@ -341,6 +343,9 @@ body, input {
   background-color: rgba(0, 0, 0, 0.459);
 }
 
+#register .container-fluid {
+  height: 120vh;
+}
 #register .hero-auth {
   height: 100%;
 }

@@ -6,16 +6,19 @@
   .container-fluid {
     display: flex;
     position: relative;
-    height: 110vh;
     @include layar(tablet) {
       flex-wrap: wrap;
     }
   }
 }
 
+
 #login {
-  .hero-auth {
+  .container-fluid {
     height: 110vh;
+  }
+  .hero-auth {
+    height: 100%;
     &::after {
       content: "";
       position: absolute;
@@ -28,6 +31,9 @@
   }
 }
 #register {
+  .container-fluid {
+    height: 120vh;
+  }
   .hero-auth {
     height: 100%;
     &::after {
