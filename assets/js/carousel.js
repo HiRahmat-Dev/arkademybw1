@@ -3,17 +3,12 @@ const slides = Array.from(track.children);
 const nextButton = document.querySelector('.next-btn');
 const prevButton = document.querySelector('.prev-btn');
 const slideWidth = track.querySelector('.current__slide').clientWidth;
-
-
 let urutan = 1;
 track.style.transform = `translateX(${-slideWidth * urutan}px)`;
-
 const zoomIn = (currentSlide, targetSlide) => {
   currentSlide.classList.remove('current__slide');
   targetSlide.classList.add('current__slide');
 }
-
-
 nextButton.addEventListener('click', () => {
   const currentSlide = track.querySelector('.current__slide');
   const nextSlide = currentSlide.nextElementSibling;
@@ -22,9 +17,6 @@ nextButton.addEventListener('click', () => {
   urutan++;
   track.style.transform = `translateX(${-widthNextSlide * urutan}px)`;
 });
-
-
-
 prevButton.addEventListener('click', () => { 
   const currentSlide = track.querySelector('.current__slide');
   const prevSlide = currentSlide.previousElementSibling;
@@ -33,7 +25,6 @@ prevButton.addEventListener('click', () => {
   urutan--;
   track.style.transform = `translateX(${-widthPrevSlide * urutan}px)`;
 });
-
 const kategori = document.querySelectorAll('.kategori');
 const waktu = document.querySelectorAll('.waktu');
 kategori.forEach(k => {
@@ -48,7 +39,6 @@ kategori.forEach(k => {
     });
   });
 })
-
 waktu.forEach(w => {
   w.addEventListener('click', () => {
     w.nextElementSibling.classList.toggle('muncul');
@@ -61,8 +51,3 @@ waktu.forEach(w => {
     });
   });
 })
-
-
-
-
-
